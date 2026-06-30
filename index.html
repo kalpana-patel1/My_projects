@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Tracker</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header><h2>Expense Tracker</h2></header>
+    <main>
+      <aside>
+        <aside class="sidebar">
+          <h2>Add New Expense</h2>
+
+          <form>
+            <div class="form-group">
+              <label for="expense-name">Expense Name</label>
+              <input
+                type="text"
+                id="expense-name"
+                placeholder="e.g. Lunch, Shopping"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="amount">Amount (₹)</label>
+              <input type="number" id="amount" placeholder="e.g. 500" />
+            </div>
+
+            <div class="form-group">
+              <label for="date">Date</label>
+              <input type="date" id="date" />
+            </div>
+
+            <div class="form-group">
+              <label for="category">Category</label>
+
+              <select id="category">
+                <option>Select Category</option>
+                <option>Food</option>
+                <option>Travel</option>
+                <option>Shopping</option>
+                <option>Bills</option>
+                <option>Entertainment</option>
+                <option>Others</option>
+              </select>
+            </div>
+
+            <div class="category-buttons">
+              <div class="category-cards">
+                <div class="category-card">
+                  🍕 Food
+                  <span id="food-total">₹0.00</span>
+                </div>
+
+                <div class="category-card">
+                  🚗 Travel
+                  <span id="travel-total">₹0.00</span>
+                </div>
+
+                <div class="category-card">
+                  🛍 Shopping
+                  <span id="shopping-total">₹0.00</span>
+                </div>
+
+                <div class="category-card">
+                  💡 Bills
+                  <span id="bills-total">₹0.00</span>
+                </div>
+
+                <div class="category-card">
+                  🎬 Entertainment
+                  <span id="entertainment-total">₹0.00</span>
+                </div>
+
+                <div class="category-card">
+                  📦 Others
+                  <span id="others-total">₹0.00</span>
+                </div>
+              </div>
+            </div>
+
+            <button class="add-btn">+ Add Expense</button>
+          </form>
+        </aside>
+      </aside>
+      <section>
+        <div class="summary-cards">
+          <div class="card">
+            <div class="card-icon">💰</div>
+
+            <div class="card-info">
+              <p>Total Expense</p>
+              <h2 id="total-expense"></h2>
+              <span>All Time</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">📋</div>
+
+            <div class="card-info">
+              <p>Transactions</p>
+              <h2 id="total-transactions"></h2>
+              <span>Total Entries</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">📈</div>
+
+            <div class="card-info">
+              <p>Highest Expense</p>
+              <h2 id="highest-expense"></h2>
+              <span>Travel</span>
+            </div>
+          </div>
+        </div>
+        <!-- sort box -->
+        <div class="controls">
+          <div class="search-box">
+            <label for="search">Search</label>
+
+            <input type="text" id="search" placeholder="Search expenses..." />
+          </div>
+
+          <div class="filter-box">
+            <label for="filter">Filter by Category</label>
+
+            <select id="filter">
+              <option>All Categories</option>
+              <option>Food</option>
+              <option>Travel</option>
+              <option>Shopping</option>
+              <option>Bills</option>
+              <option>Entertainment</option>
+              <option>Others</option>
+            </select>
+          </div>
+
+          <div class="sort-box">
+            <label for="sort">Sort By</label>
+
+            <select id="sort">
+              <option value="newest">Newest First</option>
+              <option value="oldest">Oldest First</option>
+              <option value="highest">Highest Amount</option>
+              <option value="lowest">Lowest Amount</option>
+            </select>
+          </div>
+        </div>
+        <!-- .expense-table -->
+        <div class="expense-table">
+          <table>
+            <thead>
+              <tr>
+                <th></th>
+                <th>Expense</th>
+                <th>Category</th>
+                <th>Amount</th>
+                <th>Date</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+
+            <tbody id="expense-list">
+              <tr>
+                <td></td>
+
+                <td></td>
+
+                <td>
+                  <span class="food"></span>
+                </td>
+
+                <td></td>
+
+                <td></td>
+
+                <td>
+                  <button class="delete-btn">🗑</button>
+                </td>
+              </tr>
+
+              <tr>
+                <td></td>
+
+                <td></td>
+
+                <td>
+                  <span class="travel"></span>
+                </td>
+
+                <td></td>
+
+                <td></td>
+
+                <td>
+                  <button class="delete-btn">🗑</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
