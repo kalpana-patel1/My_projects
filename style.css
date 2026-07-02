@@ -298,3 +298,182 @@ tbody tr:hover {
 
   color: white;
 }
+/* ==========================
+   Tablet (1024px)
+========================== */
+
+@media (max-width: 1024px) {
+  body {
+    padding: 15px;
+  }
+
+  main {
+    flex-direction: column;
+  }
+
+  aside,
+  .sidebar {
+    width: 100%;
+  }
+
+  section {
+    width: 100%;
+  }
+
+  .summary-cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .controls {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .expense-table {
+    overflow-x: auto;
+  }
+
+  table {
+    min-width: 700px;
+  }
+}
+
+/* ==========================
+   Mobile (768px)
+========================== */
+
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  header {
+    height: auto;
+    padding: 15px;
+  }
+
+  header h2 {
+    margin: 0;
+    line-height: normal;
+    font-size: 22px;
+    text-align: center;
+  }
+
+  main {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  aside,
+  .sidebar {
+    width: 100%;
+    padding: 20px;
+  }
+
+  section {
+    padding: 15px;
+  }
+
+  .summary-cards {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .card {
+    padding: 18px;
+  }
+
+  .card-info h2 {
+    font-size: 22px;
+  }
+
+  .controls {
+    grid-template-columns: 1fr;
+  }
+
+  .controls input,
+  .controls select {
+    width: 100%;
+  }
+
+  .expense-table {
+    overflow-x: auto;
+  }
+
+  table {
+    min-width: 650px;
+  }
+
+  th,
+  td {
+    padding: 14px;
+    font-size: 14px;
+  }
+
+  .add-btn {
+    padding: 12px;
+    font-size: 15px;
+  }
+}
+
+/* ==========================
+   Small Phones (480px)
+========================== */
+
+@media (max-width: 480px) {
+  body {
+    padding: 8px;
+  }
+
+  header h2 {
+    font-size: 20px;
+  }
+
+  .sidebar {
+    padding: 15px;
+  }
+
+  .card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .card-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+  }
+
+  .card-info h2 {
+    font-size: 20px;
+  }
+
+  .card-info p,
+  .card-info span {
+    font-size: 13px;
+  }
+
+  .category-card {
+    padding: 10px;
+  }
+
+  label {
+    padding: 5px 0;
+  }
+
+  input,
+  select {
+    font-size: 14px;
+  }
+
+  .add-btn {
+    font-size: 14px;
+  }
+
+  th,
+  td {
+    font-size: 13px;
+    padding: 12px;
+  }
+}
